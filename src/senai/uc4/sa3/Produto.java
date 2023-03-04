@@ -35,4 +35,19 @@ public class Produto {
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
+
+    @Override
+    public boolean verificarEstoque() {
+        if(quantidadeEstoque == 0) return false;
+        if(quantidadeEstoque >= 100 ) {
+            System.out.printf("Produtos suficiente em Estoque.");
+        } else if (quantidadeEstoque <100 && quantidadeEstoque > 50) {
+            System.out.printf("Estoque chegou na metade, Por favor repor.");
+        } else if (quantidadeEstoque <=10) {
+            System.out.printf("Repor o estoque urgente!");
+        }
+        return true
+
+        return true;
+    }
 }
