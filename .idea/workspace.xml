@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="79375a34-845a-48d8-8bb8-828dc94873b4" name="Changes" comment="ValidaçaoProduto">
+=======
+    <list default="true" id="79375a34-845a-48d8-8bb8-828dc94873b4" name="Changes" comment="PrimeiraVersaoClassProduto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/senai/uc4/sa3/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/senai/uc4/sa3/Produto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +68,21 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< Updated upstream
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ValidaçaoProduto" />
     <option name="LAST_COMMIT_MESSAGE" value="ValidaçaoProduto" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> Stashed changes
   </component>
 </project>
