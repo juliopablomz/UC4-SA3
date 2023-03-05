@@ -91,7 +91,7 @@ public class Produto {
         }
         return true;
     }
-   /*
+
     public String toString() {
         return "Produto{" +
                 "nome='" + nome + '\'' +
@@ -99,5 +99,5 @@ public class Produto {
                 ", quantidadeEstoque=" + quantidadeEstoque +
                 '}';
     }
-*/
+
 }
