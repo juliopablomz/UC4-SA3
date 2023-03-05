@@ -1,3 +1,4 @@
+package senai.uc4.sa3;
 public class Pagamento {
 
     private int tipoPagamento;
@@ -20,6 +21,6 @@ public class Pagamento {
     }
 
     public void realizarPagamento(Pagamento pagamento){
-        
+
     }
 }
