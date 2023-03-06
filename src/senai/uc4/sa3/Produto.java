@@ -1,12 +1,13 @@
 package senai.uc4.sa3;
 
 public class Produto {
+    //ELmanoel
 
     private String nome;
     private double preco;
     private int quantidadeEstoque;
 
-    public Produto(String nome, double preco, int quantidadeEstoque) {
+    public Produto() {
         this.nome = nome;
         this.preco = preco;
         this.quantidadeEstoque = quantidadeEstoque;
@@ -85,17 +86,18 @@ public class Produto {
     }
     
     public boolean verificarProduto(){
-        if(verificarPreco() && verificarNome() && verificarQuantidade() && verificarTotal()) return true;
+        if(verificarPreco() && verificarNome() && verificarQuantidade() && verificarTotal())
+            return true;
         return false;
     }
 
     public boolean verificarEstoque(){
-        if(quantidadeEstoque == 0) return false;
-        if(quantidadeEstoque >= 100 ) {
+        if(this.quantidadeEstoque == 0) return false;
+        if(this.quantidadeEstoque >= 100 ) {
             System.out.printf("Produtos suficiente em Estoque.");
-        } else if (quantidadeEstoque <100 && quantidadeEstoque > 50) {
+        } else if (this.quantidadeEstoque <100 && this.quantidadeEstoque > 50) {
             System.out.printf("Estoque chegou na metade, Por favor repor.");
-        } else if (quantidadeEstoque <=10) {
+        } else if (this.quantidadeEstoque <=10) {
             System.out.printf("Repor o estoque urgente!");
         }
         return true;
