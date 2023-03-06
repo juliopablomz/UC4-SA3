@@ -7,8 +7,7 @@ public class App {
 
         Pagamento p1 = new Pagamento(1);
 
-        p1.selecionarTipoPagamento(4);
-      //  p1.realizarPagamento(p1);
+       
         
     }
 
