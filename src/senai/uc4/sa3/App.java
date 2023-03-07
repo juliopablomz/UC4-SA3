@@ -2,7 +2,6 @@ package senai.uc4.sa3;
 public class App {
 
     public static void main(String[] args) {
-
         /*Produto produto1 = new Produto();
 
         produto1.setNome("Notebook");
@@ -19,8 +18,6 @@ public class App {
         Pagamento p1 = new Pagamento();
         p1.setTipoPagamento(1);
         p1.setValor(100.0);
-
-
     }
 
 
