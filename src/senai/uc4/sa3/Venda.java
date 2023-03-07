@@ -8,32 +8,30 @@ public class Venda {
     private ArrayList<Produto> listavenda;
 
     public Venda() {
-        this.virTotal = virTotal;
-        this.listavenda = listavenda;
+        virTotal = 0;
+        listavenda = new ArrayList<>();
     }
 
     public void adicionarItemVenda(Produto prod) {
-        virTotal += prod.getPreco();
         listavenda.add(prod);
-        System.out.println(prod.getNome());
-        System.out.println(prod.getPreco());
-        System.out.println(prod.getDescricao());
-        System.out.println(prod.getQuantidade());
-    }
-    public void visualizarVenda(){
-        System.out.println(listavenda);
-        System.out.println(virTotal);
+        setVirTotal(getVirTotal() + prod.getPreco());
     }
 
-    public void concluirVenda(Pagamento prod ){
-        System.out.println("Venda concluída com sucesso!"
-         + "\nVir Total: " + virTotal);
-        System.out.println(listavenda);
-        listavenda.clear();
-        virTotal = 0;
-        System.out.println(listavenda);
-        System.out.println(prod.toString());
+    public void visualizarVenda() {
+        System.out.println("Produtos no carrinho:");
+        for(Produto produto : listavenda) {
+            System.out.println(produto.toString());
+        }
     }
+
+    public void concluirVenda(Pagamento pag) {
+        System.out.printf("Valor total: R$%.2f\n", getVirTotal());
+        pag.realizarPagamento(pag);
+        listavenda.clear();
+        setVirTotal(0);
+    }
+
+    // Getters and Setters
 
     public double getVirTotal() {
         return virTotal;
@@ -51,13 +49,11 @@ public class Venda {
         this.listavenda = listavenda;
     }
 
+    @Override
     public String toString() {
-        return "Venda{" + "virTotal=" + virTotal + ", listavenda=" + listavenda + '}';
-    }
-
-
-    public void adicionarProduto(Produto produto) {
-        virTotal += produto.getPreco();
-        listavenda.add(produto);
+        return "Venda{" +
+                "virTotal=" + virTotal +
+                ", listavenda=" + listavenda +
+                '}';
     }
 }
