@@ -23,18 +23,6 @@ public class Venda {
     }
 
     public void adicionarItemVenda(Produto prod, double preco,
-                                   int quantidade) {
-        listavenda.add(prod);
-        virTotal += preco * quantidade;
-    }
-
-    public void adicionarItemVenda(Produto prod, double preco,
-                                   int quantidade, String descricao) {
-        listavenda.add(prod);
-        virTotal += preco * quantidade;
-    }
-
-    public void adicionarItemVenda(Produto prod, double preco,
                                    int quantidade, String descricao, double valorUnitario,
                                    int qtdEstoque) {
         listavenda.add(prod);
