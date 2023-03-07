@@ -8,40 +8,70 @@ public class Venda {
     private ArrayList<Produto> listavenda;
 
     public Venda() {
-        this.virTotal = 0;
-        this.listavenda = new ArrayList<>();
+        virTotal = 0;
+        listavenda = new ArrayList<>();
     }
 
     public void adicionarItemVenda(Produto prod) {
-        // TODO não implementado.
+        listavenda.add(prod);
+        virTotal += prod.getPreco();
     }
 
-    public void visualizarVenda() {
-        // TODO não implementado.
+    public void adicionarItemVenda(Produto prod, double preco) {
+        listavenda.add(prod);
+        virTotal += preco;
     }
 
-    // Faltando classe pagamento
-    public void concluirVenda(Object pag) {
-        // TODO não implementado.
+    public void adicionarItemVenda(Produto prod, double preco,
+                                   int quantidade) {
+        listavenda.add(prod);
+        virTotal += preco * quantidade;
     }
 
+    public void adicionarItemVenda(Produto prod, double preco,
+                                   int quantidade, String descricao) {
+        listavenda.add(prod);
+        virTotal += preco * quantidade;
+    }
 
-    // Getters and Setters
+    public void adicionarItemVenda(Produto prod, double preco,
+                                   int quantidade, String descricao, double valorUnitario,
+                                   int qtdEstoque) {
+        listavenda.add(prod);
+        virTotal += preco * quantidade;
+    }
+    public void adicionarItemVenda(Produto prod, double preco,
+                                   int quantidade, String descricao, double valorUnitario,
+                                   int qtdEstoque, double valorTotal) {
+        listavenda.add(prod);
+        virTotal += preco * quantidade;
+        this.virTotal += valorTotal;
+        this.virTotal += valorUnitario * qtdEstoque;
+
+
+    }
 
     public double getVirTotal() {
         return virTotal;
     }
-
-    public void setVirTotal(double virTotal) {
-        this.virTotal = virTotal;
-    }
-
     public ArrayList<Produto> getListavenda() {
         return listavenda;
     }
-
+    public void setVirTotal(double virTotal) {
+        this.virTotal = virTotal;
+    }
     public void setListavenda(ArrayList<Produto> listavenda) {
         this.listavenda = listavenda;
+
     }
 
+    public String toString() {
+        return "Venda{" + "virTotal=" + virTotal + ", listavenda=" + listavenda + '}';
+    }
+
+
+    public void adicionarProduto(Produto produto) {
+        virTotal += produto.getPreco();
+        listavenda.add(produto);
+    }
 }

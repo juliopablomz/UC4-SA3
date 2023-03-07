@@ -15,9 +15,16 @@ public class App {
         //produto1.verificarEstoque();
         */
 
-        Pagamento p1 = new Pagamento();
-        p1.setTipoPagamento(1);
-        p1.setValor(100.0);
+        //Pagamento p1 = new Pagamento();
+        //p1.setTipoPagamento(1);
+        //p1.setValor(100.0);
+
+        Venda V = new Venda();
+        V.adicionarProduto(new Produto());
+
+
+
+
     }
 
 
