@@ -8,49 +8,47 @@ public class Venda {
     private ArrayList<Produto> listavenda;
 
     public Venda() {
-        virTotal = 0;
-        listavenda = new ArrayList<>();
+        this.virTotal = virTotal;
+        this.listavenda = listavenda;
     }
 
     public void adicionarItemVenda(Produto prod) {
-        listavenda.add(prod);
         virTotal += prod.getPreco();
+        listavenda.add(prod);
+        System.out.println(prod.getNome());
+        System.out.println(prod.getPreco());
+        System.out.println(prod.getDescricao());
+        System.out.println(prod.getQuantidade());
+    }
+    public void visualizarVenda(){
+        System.out.println(listavenda);
+        System.out.println(virTotal);
     }
 
-    public void adicionarItemVenda(Produto prod, double preco) {
-        listavenda.add(prod);
-        virTotal += preco;
-    }
-
-    public void adicionarItemVenda(Produto prod, double preco,
-                                   int quantidade, String descricao, double valorUnitario,
-                                   int qtdEstoque) {
-        listavenda.add(prod);
-        virTotal += preco * quantidade;
-    }
-    public void adicionarItemVenda(Produto prod, double preco,
-                                   int quantidade, String descricao, double valorUnitario,
-                                   int qtdEstoque, double valorTotal) {
-        listavenda.add(prod);
-        virTotal += preco * quantidade;
-        this.virTotal += valorTotal;
-        this.virTotal += valorUnitario * qtdEstoque;
-
-
+    public void concluirVenda(Pagamento prod ){
+        System.out.println("Venda concluída com sucesso!"
+         + "\nVir Total: " + virTotal);
+        System.out.println(listavenda);
+        listavenda.clear();
+        virTotal = 0;
+        System.out.println(listavenda);
+        System.out.println(prod.toString());
     }
 
     public double getVirTotal() {
         return virTotal;
     }
-    public ArrayList<Produto> getListavenda() {
-        return listavenda;
-    }
+
     public void setVirTotal(double virTotal) {
         this.virTotal = virTotal;
     }
+
+    public ArrayList<Produto> getListavenda() {
+        return listavenda;
+    }
+
     public void setListavenda(ArrayList<Produto> listavenda) {
         this.listavenda = listavenda;
-
     }
 
     public String toString() {
